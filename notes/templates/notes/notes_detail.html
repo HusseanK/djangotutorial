@@ -1,0 +1,15 @@
+{% extends "polls/base.html" %} 
+{% block content %}
+    <article>
+        <div>
+            <span>
+                <a> {{object.description}} </a>
+            </span>
+            <div>
+                <p> {{object.content }}</p>
+            </div>
+            <p>{{object.date_created|date:"d - F - Y"}}</p>
+        </div>
+    </article>
+    <a href="{% url 'notes:notes'%}">Notes Home</a>
+{% endblock %}

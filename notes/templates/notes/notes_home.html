@@ -1,0 +1,15 @@
+{% extends "polls/base.html" %} 
+
+
+{% block content %}
+    <a href="{% url 'notes:create' %}">Create</a>
+    {% for content in notes %}
+    <article>
+        <div style="border: 2px solid black; margin: 12px;">
+            <p> {{ content.description }} </p>
+            <p> {{ content.content }} </p>
+            <p> {{ content.date_created|date:"d - F - Y" }} </p>
+        </div>
+    </article>
+    {% endfor %}
+{% endblock %}
