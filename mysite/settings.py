@@ -21,11 +21,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
     "polls.apps.PollsConfig",
-    "rest_framework",
     "quickstart.apps.QuickstartConfig",
     "snippets.apps.SnippetsConfig",
     "notes.apps.NotesConfig",
+    
+    "rest_framework",
     "crispy_forms",
     "crispy_bootstrap4",
 ]
