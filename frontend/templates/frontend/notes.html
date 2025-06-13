@@ -1,0 +1,16 @@
+{% extends 'frontend/base.html' %}
+
+{% block content %}
+    <div class="header"> 
+        <h1> Notes! </h1>
+    </div>   
+    {% for content in notes %}
+    <article>
+        <div style="border: 2px solid black; margin: 12px; text-align: center;">
+            <h2> {{content.description}} </h2>
+            <p> {{ content.content }} </p>
+            <small> {{ content.date_created }} </small>
+        </div>
+    </article>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'frontend/base.html' %}
+
+{% block content %}
+    <div class="header"> 
+        <h1> Polls! </h1>
+    </div>   
+
+    {% for content in polls %}
+    <article>
+        <div style="border: 2px solid black; margin: 12px; text-align: center;">
+            <h2> {{ content.question_text }} </h2>
+            <small> {{ content.pub_date }} </small>
+        </div>
+    </article>
+    {% endfor %}
+{% endblock %}

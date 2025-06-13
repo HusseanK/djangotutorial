@@ -1,0 +1,23 @@
+{% extends 'frontend/base.html' %}
+
+{% block content %}
+    <div class="header"> 
+        <h1> Snippets! </h1>
+    </div>
+
+    {% for content in snippets %}
+    <article>
+        <div style="border: 2px solid black; margin: 12px; text-align: center;">
+            <h2> {{ content.title }} </h2>
+            <p> {{ content.code }} </p>
+            <hr>
+            <small> {{ content.linenos }} </small> |
+            <small> {{ content.language }} </small> |
+            <small> {{ content.style }} </small> |
+            <small> {{ content.owner }} </small> |
+            <br>
+            <small> {{ content.created }} </small>
+        </div>
+    </article>
+    {% endfor %}
+{% endblock %}
