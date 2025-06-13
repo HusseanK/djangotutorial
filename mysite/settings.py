@@ -26,10 +26,12 @@ INSTALLED_APPS = [
     "quickstart.apps.QuickstartConfig",
     "snippets.apps.SnippetsConfig",
     "notes.apps.NotesConfig",
+    "frontend.apps.FrontendConfig",
     
     "rest_framework",
     "crispy_forms",
     "crispy_bootstrap4",
+
 ]
 
 MIDDLEWARE = [

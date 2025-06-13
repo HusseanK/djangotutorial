@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel='icon', href= "{%static 'frontend/favicon.png' %}"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="{% static 'frontend/styles.css' %}" />
+
+  </head>
+  <nav>
+    <a href="{% url 'home'%}"">Home</a>
+    <a href="{% url 'polls'%}"">Polls</a>
+    <a href="{% url 'snippets'%}"">Snippets</a>
+    <a href="{% url 'notes'%}"">notes</a>
+  </nav>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+  <footer
+    class="text-end py-2 px-3 shadow-sm"
+    style="position: fixed; bottom: 0; right: 0"
+  >
+    <small>&copy; 2025 My Project Website using Django</small>
+  </footer>
+  <script src="{% static 'frontend/main.js' %}"></script>
+</html>

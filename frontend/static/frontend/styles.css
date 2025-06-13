@@ -1,0 +1,13 @@
+body{
+    background-color: grey;
+}
+
+.header{
+    background-color: rgb(56, 56, 56);
+    color: white;
+    justify-content: center;
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+    border: 12px solid red;
+}

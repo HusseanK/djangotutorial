@@ -9,10 +9,11 @@ router.register(r"users", views.UserViewSet)
 router.register(r"groups", views.GroupViewSet)
 
 urlpatterns = [
+    path("", include("frontend.urls"), name= "home" ),
     path("polls/", include("polls.urls")),
     path("admin/", admin.site.urls),
     path("notes/", include("notes.urls")),
     path("Users/", include(router.urls)),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
-    path("", include("snippets.urls")),
+    path("snippets/", include("snippets.urls")),
 ]
