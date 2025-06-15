@@ -27,11 +27,11 @@ INSTALLED_APPS = [
     "snippets.apps.SnippetsConfig",
     "notes.apps.NotesConfig",
     "frontend.apps.FrontendConfig",
+    "weather.apps.WeatherConfig",
     
     "rest_framework",
     "crispy_forms",
     "crispy_bootstrap4",
-
 ]
 
 MIDDLEWARE = [
@@ -127,3 +127,6 @@ REST_FRAMEWORK = {
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+
+WEATHER_API_KEY = 'ZYYAWLARZCNN2MC67V4K5HA3L'

@@ -1,0 +1,30 @@
+{% extends "frontend/base.html" %} 
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form method="POST">
+        {{ form|crispy }}
+        {% csrf_token %}
+
+        <button type="submit"> Submit </button>
+    </form>
+
+    {% if weather %}
+    <ul >
+        {% for day in weather %}
+        <div>
+            <h3>Day: {{ day.datetime }} </h3>
+            <li>
+                Temp-Max: {{day.tempmax}}
+            </li>
+            <li>
+                Temp-Min: {{day.tempmin}}
+            </li>
+            <li>
+                Average-Temp: {{day.temp}}
+            </li>
+        </div>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endblock %}

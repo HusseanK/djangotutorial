@@ -1,12 +1,7 @@
 from django import forms
 
 class WeatherForm(forms.Form):
-    city = forms.CharField()
+    state = forms.CharField()
     country = forms.CharField(widget=forms.Textarea)
-    timeframe = forms.SplitDateTimeWidget()
-
-    def confirm_details(self):
-        pass
-
-
-
+    date_from = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
+    date_to = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
