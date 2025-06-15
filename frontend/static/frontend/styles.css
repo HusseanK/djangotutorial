@@ -1,13 +1,53 @@
-body{
-    background-color: grey;
+body {
+  background-color: grey;
 }
 
-.header{
-    background-color: rgb(56, 56, 56);
-    color: white;
-    justify-content: center;
-    text-align: center;
-    margin: 1%;
-    padding: 1%;
-    border: 12px solid red;
+.header {
+  background-color: rgb(56, 56, 56);
+  color: white;
+  justify-content: center;
+  text-align: center;
+  margin: 1%;
+  padding: 1%;
+  border: 12px solid red;
+}
+
+.weather-form {
+  background-color: #323232;
+  color: white;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 12px;
+  margin: 4px;
+  border: 4px solid black;
+  text-align: center;
+}
+
+.weather-box {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-between;
+  color: white;
+  background-color: rgb(32, 32, 32);
+}
+
+.weather-box div {
+  flex: 0 0 20%;
+  margin: 12px;
+  padding: 0;
+  justify-content: center;
+}
+
+.weather-box h2 {
+  font-size: large;
+}
+.weather-box li {
+  padding: 0;
+  margin: 4px;
+  list-style: none;
 }
