@@ -1,10 +1,6 @@
 import requests
 from django.conf import settings
 
-# For external use
-# if not settings.configured:
-#     settings.configure(WEATHER_API_KEY="")
-
 params = {
     "unitGroup": "metric",
     "elements": "datetime,tempmax,tempmin,temp",
@@ -12,7 +8,6 @@ params = {
     "include": "days",
     "contentType": "json",
 }
-
 
 def create_weather_url(location: tuple[str], date_min: str, date_max: str) -> str:
     """
